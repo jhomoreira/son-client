@@ -1,0 +1,5 @@
+  <ul class="pagination">
+    <li [ngClass]="{'active': activePage == page}" class="waves-effect" *ngFor="let page of pages">
+        <a href="" (click)="changePage($event, page)">{{ page }}</a>
+    </li>
+  </ul>

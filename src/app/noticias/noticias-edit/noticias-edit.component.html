@@ -1,0 +1,29 @@
+<h5><i class="material-icons left black-text">chevron_right</i> Edição de Notícia</h5>
+
+<div class="card-panel grey lighten-5">
+  <div class="row">
+    <form (ngSubmit)="save()">
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="title">Título</label>
+          <input name="title" type="text" class="form-control validate" id="title" [(ngModel)]="noticia.title" placeholder="Título">
+        </div>
+        <div class="input-field col s12">
+         <ng-container *ngIf="noticia?.content">
+          <ckeditor name="content" id="content" [(ngModel)]="noticia.content" [editor]="Editor"></ckeditor>
+         </ng-container>
+        </div>
+        <div class="input-field col s12">
+          <label for="title">Imagem Destaque</label>
+          <input name="thumb" type="text" class="form-control validate" id="thumb" [(ngModel)]="noticia.thumb" placeholder="Imagem destaque">
+        </div>
+
+      </div>
+      <input value="Salvar" class="waves-effect waves-light green darken-3 btn right" type="submit" >
+
+      <a [routerLink]="['/noticias']" class="green darken-3 waves-effect waves-light btn">Voltar</a>
+
+
+    </form>
+  </div>
+</div>

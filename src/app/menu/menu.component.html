@@ -1,0 +1,44 @@
+<nav>
+  <div class="row">
+    <div class="nav-wrapper col s12  green lighten-3">
+      <ul>
+      <li id="btn-sidenav-demo"><a href="#"><i class="material-icons">
+        menu
+      </i> </a></li>
+      </ul>
+      <a href="#" class="brand-logo"><img width="180" src="https://agrocerespic.com.br/wp-content/uploads/2018/06/agroceres-pic-1.png"/></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+
+          <mz-dropdown
+                  [id]="'dropdown-demo'"
+                  [align]="'right'"
+                  [belowOrigin]="true"
+                  [constrainWidth]="false"
+                  [dropdownButtonId]="'btn-dropdown-demo'"
+                  [gutter]="true"
+                  [hover]="true"
+                  [inDuration]="300"
+                  [outDuration]="300"
+                  [stopPropagation]="true"
+          >
+            <mz-dropdown-item><a href="#!">Meu Perfil</a></mz-dropdown-item>
+            <mz-dropdown-divider></mz-dropdown-divider>
+            <mz-dropdown-item><a href="#!">Sair</a></mz-dropdown-item>
+          </mz-dropdown>
+
+
+          <a mz-button id="btn-dropdown-demo" href="#">
+            <i mz-icon
+               [align]="'right'"
+               [icon]="'account_circle'"
+               [size]="'medium'">
+            </i>
+            Bem vindo, Jho!
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>

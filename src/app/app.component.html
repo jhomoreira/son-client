@@ -1,0 +1,44 @@
+<app-menu></app-menu>
+<!-- Page Layout here -->
+<main>
+<div class="row">
+
+  <div class="col s3">
+      <mz-sidenav
+            [id]="'sidenav-demo'"
+            [collapseButtonId]="'btn-sidenav-demo'"
+            [backgroundClass]="'green lighten-2'"
+      >
+      <mz-sidenav-header>
+        <img class="logo-pos" src="https://agrocerespic.com.br/wp-content/uploads/2018/06/agroceres-pic-1.png" alt="">
+      </mz-sidenav-header>
+      <mz-sidenav-link *ngIf="isLogged" [active]="true">
+        <a href="#" class="white-text"><i class="material-icons left white-text">account_box</i>Usuários Registrados</a>
+      </mz-sidenav-link>
+      <mz-sidenav-link *ngIf="isLogged">
+        <a href="#" class="white-text"><i class="material-icons left white-text">library_books</i>Notícias</a>
+      </mz-sidenav-link>
+        <mz-sidenav-link *ngIf="isLogged">
+          <a href="#" class="white-text"><i class="material-icons left white-text">widgets</i>Canal Técnico</a>
+        </mz-sidenav-link>
+      <mz-sidenav-link *ngIf="isLogged">
+        <a href="#" class="white-text"><i class="material-icons left white-text">settings_voice</i>Podcasts</a>
+      </mz-sidenav-link>
+      <mz-sidenav-link>
+        <a href (click)="login($event)" class="white-text"><i class="material-icons left white-text">settings_voice</i>Login</a>
+      </mz-sidenav-link>
+      <mz-sidenav-link *ngIf="isLogged">
+          <a href (click)="logout($event)" class="white-text"><i class="material-icons left white-text">settings_voice</i>Logout</a>
+        </mz-sidenav-link>
+    </mz-sidenav>
+  </div>
+  <div class="container">
+    <div class="col s12 padding-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>
+</main>
+<app-footer></app-footer>
+

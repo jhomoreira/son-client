@@ -1,0 +1,35 @@
+<h5><i class="material-icons left black-text">chevron_right</i> Cadastrar Usuário</h5>
+
+<div class="card-panel grey lighten-5">
+    <div class="row">
+        <form (submit)="save()">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="name" name="name" type="text" class="validate" value="user.name" [(ngModel)]="user.name">
+                    <label for="name">Nome</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="phone" name="phone" type="tel" class="validate" value="user.phone" [(ngModel)]="user.phone">
+                    <label for="phone">Telefone</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" name="email" type="text" class="validate" value="user.email" [(ngModel)]="user.email">
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input id="password" name="password" type="password" class="validate" [(ngModel)]="user.password">
+                    <label for="password">Senha</label>
+                </div>
+            </div>
+            <input value="Salvar" class="waves-effect waves-light green darken-3 btn right" type="submit" >
+
+            <a [routerLink]="['/users/' + user.id]" class="green darken-3 waves-effect waves-light btn">Voltar</a>
+
+
+        </form>
+    </div>
+</div>
